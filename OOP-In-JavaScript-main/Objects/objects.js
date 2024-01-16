@@ -30,3 +30,16 @@ let person = {
 console.log(person.first_name);
 console.log(person.last_name);
 console.log(person.worksAt());
+
+// Using object constructors
+
+function person_data(first_name, sur_name, works_at) {
+  this.first_name = first_name;
+  this.sur_name = sur_name;
+  this.worksAt = works_at;
+  this.works_at = `${this.first_name} ${this.sur_name} works at ${this.worksAt}`;
+}
+
+let person_1 = new person_data("Sabeer", "Waqas", "software house");
+
+console.log(person_1.works_at);
