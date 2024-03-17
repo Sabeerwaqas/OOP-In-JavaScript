@@ -1,4 +1,4 @@
-//     Class in JavaScript is built by class keyword
+// Class in JavaScript is built by class keyword
 
 class Person {
   constructor(name, age) {
@@ -44,9 +44,8 @@ class House {
   };
 
   addResident = (resident) => {
-    this.residents.push(resident); 
+    this.residents.push(resident);
   };
-
 }
 
 let home = new House("Pakistan, Karachi", "10000000 pkr", [
@@ -54,11 +53,67 @@ let home = new House("Pakistan, Karachi", "10000000 pkr", [
   workMake2,
 ]);
 
-console.log(home.getResidents())
+console.log(home.getResidents());
 
-
-let Paulo = new Person ("Paulo", 30);
+let Paulo = new Person("Paulo", 30);
 
 home.addResident(Paulo);
 
-console.log(home.getResidents())
+console.log(home.getResidents());
+
+class Professor {
+  constructor(name, teaches) {
+    this.name = name;
+    this.teaches = teaches;
+  }
+}
+
+let englishProfessor = new Professor("Prof. John", "English");
+
+console.log(
+  `The newly hired professor name is ${englishProfessor.name} and his subject is ${englishProfessor.teaches}`
+);
+
+// Defining object using traditional way
+
+function Vehicle(name, maker, engine) {
+  this.name = name;
+  this.maker = maker;
+  this.engine = engine;
+
+  Vehicle.prototype.getDetails = function () {
+    console.log(`I have a ${name}, made by ${maker} and launched in ${engine}`);
+  };
+}
+
+let BikeOne = new Vehicle("70", "Unique", "70 CC");
+
+console.log(BikeOne.getDetails());
+
+// Encapsulation
+
+class mobilePhone {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+  addLaunchedYear(addLaunchedYear){
+    this.addLaunchedYear = addLaunchedYear;
+  }
+  getDetails(){
+    console.log(`Mobile name: ${this.name}, Launched Year: ${this.addLaunchedYear}`);
+  }
+}
+
+let myMobile = new mobilePhone("Galaxy A12", "15K");
+
+myMobile.addLaunchedYear("2021");
+
+myMobile.getDetails();
+
+// console.log(`My mobile name ${myMobile.name} and the price is ${myMobile.price}`);
+
+
+// console.log(`My mobile name ${myMobile.name} and the price is ${myMobile.price}, The launched year is ${myMobile.addLaunchedYear(add)}`);
+
+
