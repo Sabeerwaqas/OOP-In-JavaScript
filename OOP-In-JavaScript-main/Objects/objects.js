@@ -19,27 +19,76 @@
 
 // Using object literal
 
-let person = {
-  first_name: "Sabeer",
-  last_name: "Waqas",
-  worksAt: function () {
-    return `${this.first_name} ${this.last_name} works at Mangotech`;
-  },
-};
+// let person = {
+//   first_name: "Sabeer",
+//   last_name: "Waqas",
+//   worksAt: function () {
+//     return `${this.first_name} ${this.last_name} works at Mangotech`;
+//   },
+// };
 
-console.log(person.first_name);
-console.log(person.last_name);
-console.log(person.worksAt());
+// console.log(person.first_name);
+// console.log(person.last_name);
+// console.log(person.worksAt());
 
 // Using object constructors
 
-function person_data(first_name, sur_name, works_at) {
-  this.first_name = first_name;
-  this.sur_name = sur_name;
-  this.worksAt = works_at;
-  this.works_at = `${this.first_name} ${this.sur_name} works at ${this.worksAt}`;
+// function person_data(first_name, sur_name, works_at) {
+//   this.first_name = first_name;
+//   this.sur_name = sur_name;
+//   this.worksAt = works_at;
+//   this.works_at = `${this.first_name} ${this.sur_name} works at ${this.worksAt}`;
+// }
+
+// let person_1 = new person_data("Sabeer", "Waqas", "software house");
+
+// console.log(person_1.works_at);
+
+
+// Prototypes in JS
+
+let employee = {
+  firstName: "Sabeer",
+  cal() {
+    console.log("Tax deduction 10%")
+  }
 }
 
-let person_1 = new person_data("Sabeer", "Waqas", "software house");
+let person_1 = {
+  salary: 50000
+}
 
-console.log(person_1.works_at);
+person_1.__proto__ = employee;
+
+let person_2 = {
+  salary: 60000,
+  cal() {
+    console.log("Tax deduction 20%")
+  }
+}
+
+
+person_2.__proto__ = employee;
+
+// Classes
+
+class ToyotaCar {
+  constructor() {
+    console.log("Creating new object.")
+  }
+  start() {
+    console.log("Start");
+  }
+  stop() {
+    console.log("Stop");
+  }
+
+  setBrand(brand) {
+    this.brandName = brand;
+  }
+
+}
+
+let fortuner = new ToyotaCar();
+let yaris = new ToyotaCar();
+
