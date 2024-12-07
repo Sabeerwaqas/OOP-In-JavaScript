@@ -72,23 +72,67 @@ person_2.__proto__ = employee;
 
 // Classes
 
-class ToyotaCar {
-  constructor() {
-    console.log("Creating new object.")
-  }
-  start() {
-    console.log("Start");
-  }
-  stop() {
-    console.log("Stop");
-  }
+// class ToyotaCar {
+//   constructor() {
+//     console.log("Creating new object.")
+//   }
+//   start() {
+//     console.log("Start");
+//   }
+//   stop() {
+//     console.log("Stop");
+//   }
 
-  setBrand(brand) {
-    this.brandName = brand;
-  }
+//   setBrand(brand) {
+//     this.brandName = brand;
+//   }
 
+// }
+
+// let fortuner = new ToyotaCar();
+// let yaris = new ToyotaCar();
+
+
+// Inheritance 
+
+// class Parent {
+//   constructor(profession) {
+//     console.log("Parent constructor called.")
+//     this.profession = profession;
+//   }
+//   greetings() {
+//     console.log("Hello World")
+//   }
+// }
+
+
+// class Child extends Parent {
+//   constructor(age, profession) {
+//     console.log("Child constructor called.")
+//     super(profession)
+//     this.age = age;
+//     console.log("Child constructor exit.")
+
+//   }
+//   setName(userName) {
+//     this.userName = userName;
+//   }
+// }
+
+// let obj = new Child();
+
+
+let data = "Some data"
+
+class User {
+  constructor(userName, age) {
+    this.userName = userName;
+    this.age = age;
+  }
+  viewData() {
+    console.log("Data =>", data)
+  }
 }
 
-let fortuner = new ToyotaCar();
-let yaris = new ToyotaCar();
 
+let student1 = new User("Sabeer", 24);
